@@ -1,0 +1,305 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/CALOGO.pgn.jpg");
+    background-size: contain;
+    background-position:50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    width: 100px;
+    height: 100px;
+    background: url("../img/logo.png");
+    background-size: contain;
+    background-position: center;
+    margin: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+header nav .active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Hero Section */
+#hero {
+    background: url("../img/") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: top left ;
+}
+
+#hero h1, #hero h2 {
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: top left;
+}
+
+#hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    background-color: yellow;
+    color: #666;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Section */
+main {
+    width: 100%;
+    position: relative;
+}
+
+/* Contenedor principal de los planes */
+#planes {
+    width: 100%;
+    background-color: #fffbfb; /* Fondo negro para toda la sección */
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anuncio {
+    width: 80%; /* Ajusta el ancho del anuncio */
+    background-color: #ffffff; /* Fondo gris oscuro para el anuncio */
+    padding: 20px;
+    border: 2px solid #333; /* Borde gris oscuro */
+    border-radius: 10px;
+    margin-bottom: 40px; /* Espacio debajo del anuncio */
+    text-align: center;
+    color: #fff; /* Color del texto */
+}
+
+.anuncio h2 {
+    font-size: 36px; /* Tamaño del título */
+    margin-bottom: 10px;
+    color: #fff; /* Asegura que el título sea blanco */
+}
+
+.anuncio p {
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.6;
+    color: #fff; /* Asegura que el texto sea blanco */
+}
+
+/* Ajustes para los artículos en la fila */
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los artículos horizontalmente */
+    gap: 20px; /* Espacio entre los artículos */
+}
+
+/* Artículo de los planes */
+#planes article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000; /* Fondo negro para los artículos */
+    padding: 15px;
+    border: 1px solid #333; /* Borde gris oscuro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del cuadro */
+    border-radius: 10px;
+    width: 300px; /* Ancho fijo para todos los contenedores */
+    height: 400px; /* Altura fija para todos los contenedores */
+    transition: transform 0.3s ease-in-out; /* Efecto de transformación */
+    margin: 20px; /* Margen alrededor de cada artículo */
+}
+
+/* Imagen en el artículo */
+#planes article img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Altura fija para que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del contenedor */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados superiores */
+}
+
+/* Título debajo de la imagen */
+#planes article h3 {
+    margin-top: 5px; /* Reduce el margen superior */
+    color: yellow;
+    text-align: center;
+    font-size: 16px; /* Tamaño uniforme y un poco más pequeño */
+    line-height: 1.2; /* Reduce el espacio entre líneas */
+}
+
+/* Descripción del artículo */
+#planes article p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px; /* Tamaño un poco más pequeño para la descripción */
+    margin: 5px 0; /* Reduce el margen superior e inferior */
+    line-height: 1.4; /* Reduce la separación entre las líneas */
+}
+
+/* Efecto al hacer hover */
+#planes article:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del contenedor un 5% */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+}
+
+/* Descripción */
+#descripcion {
+    padding-top: 15%;
+    width: 100%;
+    height: 150vh;
+    background: rgb(255, 251, 251);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+#descripcion h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#descripcion p {
+    font-size: 22px;
+    text-align: center;
+}
+
+#descripcion .fila {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+/* Destinos */
+#destinos {
+    width: 100%;
+    padding: 91px 0;
+    text-align: center;
+}
+
+#destinos h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: yellow;
+    text-align: center;
+}
+
+#destinos .fila {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#destinos article {
+    margin: 0 40px;
+    position: relative;
+}
+
+#destinos article h3 {
+    text-align: center;
+    color: #fffdfd;
+}
+
+#destinos {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Footer */
+footer {
+    padding: 3%; /* Reduce el padding para hacer el footer más corto */
+    width: 100%;
+    height: auto; /* Permite que el footer ajuste su altura según el contenido */
+    text-align: center;
+    background-color: #333; /* Fondo negro */
+    color: #fff; /* Color del texto */
+    border-top: 2px solid #fff; /* Añade un borde superior blanco para destacarlo */
+}
+
+/* Responsive Design */
+
+/* Desktop screens (min-width: 1024px) */
+@media only screen and (min-width: 1024px) {
+    /* No changes needed for desktop screens */
+}
+
+/* Tablet screens (max-width: 1023px) and (min-width: 768px) */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+    /* Ajusta el diseño para pantallas de tabletas */
+    #hero {
+        height: 100vh;
+    }
+}
